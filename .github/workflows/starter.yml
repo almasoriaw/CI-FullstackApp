@@ -30,11 +30,11 @@ jobs:
 
       # Install the dependencies.
       - run: npm install
-      working-directory: ./backend 
+        working-directory: ./backend 
 
       # Run the tests.
       - run: npm test
-      working-directory: ./backend
+        working-directory: ./backend
 
       # Run the linter.
       - run: npm run lint

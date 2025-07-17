@@ -29,13 +29,16 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       # Install the dependencies.
-      - run: npm install 
+      - run: npm install
+      working-directory: ./backend 
 
       # Run the tests.
       - run: npm test
+      working-directory: ./backend
 
       # Run the linter.
       - run: npm run lint
+      working-directory: ./backend
 
       # Send a console message at completion.
       - run: |
